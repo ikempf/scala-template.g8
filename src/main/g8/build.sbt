@@ -1,9 +1,9 @@
-lazy val root = (project in file(".")).
+lazy val `$name$` = (project in file(".")).
   settings(
     inThisBuild(List(
       organization := "$organization$",
       name := "$name$",
-      scalaVersion := "2.12.6"
+      scalaVersion := "2.12.7"
     )),
     scalacOptions += "-Ypartial-unification",
     libraryDependencies ++= List(
