@@ -6,8 +6,8 @@ lazy val `$name$` = (project in file("."))
     scalaVersion := "2.12.8",
     scalacOptions += "-Ypartial-unification",
     libraryDependencies ++= List(
-      "org.typelevel" %% "cats-core" % "1.5.0",
-      "org.scalatest" %% "scalatest" % "3.0.5" % Test
+      "org.typelevel" %% "cats-core" % "1.6.0",
+      "org.scalatest" %% "scalatest" % "3.0.7" % Test
     ),
     addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.9.8"),
     scalacOptions ++= List(
