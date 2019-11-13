@@ -3,13 +3,12 @@ lazy val `$name$` = (project in file("."))
   .settings(
     organization := "$organization$",
     name := "$name$",
-    scalaVersion := "2.12.8",
-    scalacOptions += "-Ypartial-unification",
+    scalaVersion := "2.12.10",
     libraryDependencies ++= List(
-      "org.typelevel" %% "cats-core" % "1.6.0",
-      "org.scalatest" %% "scalatest" % "3.0.7" % Test
+      "org.typelevel" %% "cats-core" % "2.0.0",
+      "org.scalatest" %% "scalatest" % "3.0.8" % Test
     ),
-    addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.9.8"),
+    addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.9.9"),
     scalacOptions ++= List(
       "-target:jvm-1.8",
       "-feature",
