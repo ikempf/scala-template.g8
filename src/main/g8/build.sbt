@@ -3,10 +3,10 @@ lazy val `$name$` = (project in file("."))
   .settings(
     organization := "$organization$",
     name := "$name$",
-    scalaVersion := "2.12.10",
+    scalaVersion := "2.13.1",
     libraryDependencies ++= List(
-      "org.typelevel" %% "cats-core" % "2.0.0",
-      "org.scalatest" %% "scalatest" % "3.0.8" % Test
+      "org.typelevel" %% "cats-core" % "2.1.0",
+      "org.scalatest" %% "scalatest" % "3.1.0" % Test
     ),
     addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.9.9"),
     scalacOptions ++= List(
@@ -17,17 +17,20 @@ lazy val `$name$` = (project in file("."))
       "-unchecked",
       "-deprecation",
       "-language:higherKinds",
-      "-Xlint",
-      "-Ypartial-unification",
-      "-Ywarn-dead-code",
-      "-Ywarn-infer-any",
-      "-Ywarn-nullary-override",
-      "-Ywarn-unused:implicits",
-      "-Ywarn-unused:imports",
-      "-Ywarn-unused:locals",
-      "-Ywarn-unused:params",
-      "-Ywarn-unused:patvars",
-      "-Ywarn-unused:privates",
-      "-Ywarn-value-discard"
-    ),
+      "-Wdead-code",
+      "-Wvalue-discard",
+      "-Wunused:imports",
+      "-Wunused:patvars",
+      "-Wunused:implicits",
+      "-Wunused:locals",
+      "-Wunused:explicits",
+      "-Wunused:params",
+      "-Wunused:privates",
+      "-Woctal-literal",
+      "-Xlint:adapted-args",
+      "-Xlint:infer-any",
+      "-Xlint:nullary-unit",
+      "-Xlint:nullary-override",
+      "-Xlint:inaccessible",
+      "-Xlint:constant"
   )
