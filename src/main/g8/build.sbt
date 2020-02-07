@@ -17,6 +17,7 @@ lazy val `$name$` = (project in file("."))
       "-unchecked",
       "-deprecation",
       "-language:higherKinds",
+      "-language:existentials",
       "-Wdead-code",
       "-Wvalue-discard",
       "-Wunused:imports",
