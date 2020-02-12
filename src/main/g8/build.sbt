@@ -8,7 +8,7 @@ lazy val `$name$` = (project in file("."))
       "org.typelevel" %% "cats-core" % "2.1.0",
       "org.scalatest" %% "scalatest" % "3.1.0" % Test
     ),
-    addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.9.9"),
+    addCompilerPlugin(("org.typelevel" %% "kind-projector" % "0.11.0").cross(CrossVersion.full)),
     scalacOptions ++= List(
       "-target:jvm-1.8",
       "-feature",
@@ -34,4 +34,5 @@ lazy val `$name$` = (project in file("."))
       "-Xlint:nullary-override",
       "-Xlint:inaccessible",
       "-Xlint:constant"
+    )
   )
