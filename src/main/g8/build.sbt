@@ -10,7 +10,7 @@ lazy val `$name$` = (project in file("."))
     ),
     addCompilerPlugin(("org.typelevel" %% "kind-projector" % "0.11.0").cross(CrossVersion.full)),
     scalacOptions ++= List(
-      "-target:jvm-1.8",
+      "-target:11",
       "-feature",
       "-encoding",
       "UTF-8",
@@ -34,5 +34,6 @@ lazy val `$name$` = (project in file("."))
       "-Xlint:nullary-override",
       "-Xlint:inaccessible",
       "-Xlint:constant"
-    )
+    ),
+    javaOptions += "--illegal-access=warn"
   )
